@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+  <!-- name of package must match with CMakeLists.txt!!! -->
+  <name>simple_example_description</name>
+  <version>0.0.1</version>
+  <description>
+    simple example on how to move joints in Gazebo
+  </description>
+  <maintainer email="TorontoRoboticsClub@protonmail.com">
+    MO
+  </maintainer>
+  <license>TODO</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <run_depend>roscpp</run_depend>
+  <build_depend>rospy</build_depend>
+  <run_depend>rospy</run_depend>
+</package>

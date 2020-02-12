@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <!-- add the Gazebo world so that we launch it all together-->
+    <arg name="model" default="$(find simple_example_description)/urdf/robot.urdf"/>
+    <arg name="world" default="empty"/> 
+    <arg name="paused" default="false"/>
+    <arg name="use_sim_time" default="true"/>
+    <arg name="gui" default="true"/>
+    <arg name="headless" default="false"/>
+    <arg name="debug" default="false"/>
+    <arg name="verbose" value="true"/>
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find simple_example_description)/worlds/simple.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="headless" value="$(arg headless)"/>
+    <arg name="debug" value="$(arg debug)"/>
+    <!--by activating "verbose" mode, Gazebo prints more to terminal on launch.-->
+    <arg name="verbose" value="$(arg verbose)"/>
+    </include>
+
+    <!--load urdf into parameter server-->
+    <param name="robot_description" textfile="$(find simple_example_description)/urdf/robot.urdf" />
+
+	
+    <node name="urdf_spawner" 
+          pkg="gazebo_ros" 
+          type="spawn_model" 
+          respawn="false" 
+          output="screen" 
+          args="-urdf -model simple_model -param robot_description"/>
+
+    <!-- load the controllers -->
+    <rosparam file="$(find simple_example_description)/config/config.yaml" command="load"/>
+
+    <node name="controller_spawner" 
+          pkg ="controller_manager" 
+          type="spawner" 
+          ns="/simple_model" 
+          args="base_to_second_joint_position_controller joint_state_controller"/>
+    
+	<!-- converts joint states to TF transforms -->
+    <node name="robot_state_publisher" 
+          pkg="robot_state_publisher" 
+          type="robot_state_publisher" 
+          respawn="false" 
+          output="screen">
+        <remap from="joint_states" to="/simple_model/joint_states" />
+    </node>
+</launch>
+
