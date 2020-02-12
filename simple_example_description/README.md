@@ -2,7 +2,7 @@ This package is built based on a ros answers question and answer (see: https://a
 does not build I put together this package to allow others to have the ability 
 to simply run the code. 
 
-*NOTE* THIS IS AN EXAMPLE OF A JointPositionController
+*NOTE* THIS IS AN EXAMPLE OF A JointPositionController. Fun fact: this controller, simply 'snaps' the joint into that position. It does not 'move' it, so there is no consideration of speed and direction. 
 
 This package works on the following system:
 Ubuntu 16.04 LTS
