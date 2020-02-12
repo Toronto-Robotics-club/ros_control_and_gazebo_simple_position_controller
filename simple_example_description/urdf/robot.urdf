@@ -70,7 +70,8 @@
     <joint name="base_to_second_joint">
       <!--lets use a postion type interface, which is a mechanism for ros_control
           to communicate with hardware. See: https://wiki.ros.org/ros_control-->
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <!--hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface-->
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
     </joint>
   </transmission>
 </robot>
