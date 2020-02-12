@@ -10,6 +10,10 @@ Gazebo7 version 7.16
 Ros Kinetic
 
 to run the project follow these steps:
-1) $ catkin_make //to build the project
-2) $ roslaunch simple_example_description spawn_robot.launch
+1) Build the project: 
+       $ cd Desktop/workspace
+       $ catkin_make
+       $ source devel/setup.bash
+2) Run the project:
+       $ roslaunch simple_example_description spawn_robot.launch
 
