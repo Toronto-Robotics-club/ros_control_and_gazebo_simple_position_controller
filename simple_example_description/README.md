@@ -2,13 +2,7 @@ This package is built based on a ros answers question and answer (see: https://a
 
 *NOTE* THIS IS AN EXAMPLE OF A JointPositionController. Fun fact: this controller, simply 'snaps' the joint into that position. It does not 'move' it, so there is no consideration of speed and direction. 
 
-This package works on the following system:
-
-Ubuntu 16.04 LTS
-
-Gazebo7 version 7.16
-
-Ros Kinetic
+This package works on the following system: Ubuntu 16.04 LTS + Gazebo7 version 7.16 + Ros Kinetic
 
 to run the project follow these steps:
 1) Download the "simple_example_description" directory and put it into your Desktop/workspace/src/ directory.
