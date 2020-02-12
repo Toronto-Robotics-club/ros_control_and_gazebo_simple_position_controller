@@ -29,37 +29,47 @@ Urdf file:
 
 yaml file:
 `type: effort_controllers/JointPositionController`
+
 Result – ugly back and forth oscillation.
 
 --------------------------------------------------------------------------------
 
 
 ------------------------------------Setup #2-----------------------------------
+
 Urdf file: 
 `<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>`
 
 yaml file:
 `type: effort_controllers/JointEffortController`
+
 Result – spins one way, stops, spins the other way, and then rotates very, very fast.
+
 ---------------------------------------------------------------------------------
 
 
 -------------------------------------Setup #3--------------------------------------
+
 Urdf file: 
-<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+`<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>`
 
 yaml file:
-type: position_controllers/JointPositionController
+`type: position_controllers/JointPositionController`
+
 Result – snaps into position
+
 -------------------------------------------------------------------------------------
 
 
 ----------------------------------Setup #4----------------------------------------------
+
 Urdf file: 
-<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+`<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>`
 
 yaml file:
-type: velocity_controllers/JointVelocityController
+`type: velocity_controllers/JointVelocityController`
+
 Result – controlled rotation at the given velocity.
+
 --------------------------------------------------------------------------------------
 
