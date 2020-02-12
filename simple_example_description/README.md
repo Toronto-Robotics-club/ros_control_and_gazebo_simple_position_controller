@@ -23,12 +23,14 @@ to run the project follow these steps:
 The page https://wiki.ros.org/ros_control lists several controllers. To try different controllers simply replace one line in the urdf file (the line with the <hardwareInterface> tag), and one line in the yaml file (the second line starting with "type:.."). I have tried the 4 controller combinations listed below:
 
 ----------------------------------Setup #1--------------------------------------
+
 Urdf file: 
 `<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>`
 
 yaml file:
 `type: effort_controllers/JointPositionController`
 Result – ugly back and forth oscillation.
+
 --------------------------------------------------------------------------------
 
 
