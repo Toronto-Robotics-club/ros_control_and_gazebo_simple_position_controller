@@ -10,7 +10,7 @@ Gazebo7 version 7.16
 Ros Kinetic
 
 to run the project follow these steps:
-1) Download the "simple_example_description" folder/directory and put it into your Desktop/workspace/src/ directory.
+1) Download the "simple_example_description" directory and put it into your Desktop/workspace/src/ directory.
 2) Build the project: 
        $ cd Desktop/workspace
        $ catkin_make
