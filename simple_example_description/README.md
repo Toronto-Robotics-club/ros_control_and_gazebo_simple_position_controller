@@ -1,6 +1,4 @@
-This package is built based on a ros answers question and answer (see: https://answers.ros.org/question/273947/moving-joints-in-gazebo-simple-example/). Since the code
-does not build I put together this package to allow others to have the ability 
-to simply run the code. 
+This package is built based on a ros answers question and answer (see: https://answers.ros.org/question/273947/moving-joints-in-gazebo-simple-example/). Since the code in the answer does not build I put together this package to allow others to have the ability build and run the code.
 
 *NOTE* THIS IS AN EXAMPLE OF A JointPositionController. Fun fact: this controller, simply 'snaps' the joint into that position. It does not 'move' it, so there is no consideration of speed and direction. 
 
