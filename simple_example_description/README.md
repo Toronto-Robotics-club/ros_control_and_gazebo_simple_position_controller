@@ -24,20 +24,20 @@ The page https://wiki.ros.org/ros_control lists several controllers. To try diff
 
 ----------------------------------Setup #1--------------------------------------
 Urdf file: 
-<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+`<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>`
 
 yaml file:
-type: effort_controllers/JointPositionController
+`type: effort_controllers/JointPositionController`
 Result – ugly back and forth oscillation.
 --------------------------------------------------------------------------------
 
 
 ------------------------------------Setup #2-----------------------------------
 Urdf file: 
-<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+`<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>`
 
 yaml file:
-type: effort_controllers/JointEffortController
+`type: effort_controllers/JointEffortController`
 Result – spins one way, stops, spins the other way, and then rotates very, very fast.
 ---------------------------------------------------------------------------------
 
