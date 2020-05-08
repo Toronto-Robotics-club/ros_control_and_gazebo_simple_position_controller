@@ -1,6 +1,6 @@
 This package is built based on a ros answers question and answer (see: https://answers.ros.org/question/273947/moving-joints-in-gazebo-simple-example/). Since the code in the answer does not build I put together this package to allow others to have the ability build and run the code.
 
-*NOTE* THIS IS AN EXAMPLE OF A JointPositionController. Fun fact: this controller, simply 'snaps' the joint into that position. It does not 'move' it, so there is no consideration of speed and direction. 
+*NOTE* this is an example of a JointPositionController. Fun fact: this controller, simply 'snaps' the joint into that position. It does not 'move' it, so there is no consideration of speed and direction. Read on to use other controllers.
 
 This package works on the following system: Ubuntu 16.04 LTS + Gazebo7 version 7.16 + Ros Kinetic
 
